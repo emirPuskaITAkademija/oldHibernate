@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Product" table="products" catalog="store" optimistic-lock="version">
+        <id name="productId" type="java.lang.Integer">
+            <column name="product_id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" not-null="true" />
+        </property>
+        <property name="quantityInStock" type="int">
+            <column name="quantity_in_stock" not-null="true" />
+        </property>
+        <property name="unitPrice" type="big_decimal">
+            <column name="unit_price" precision="4" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
