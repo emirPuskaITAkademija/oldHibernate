@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 //POJO Plan Old Java Object klasa
 //Java Bean -> implements Serializable , konstruktor bez parametara, get set
-public class Product implements Serializable {
+public class Product extends ActiveProduct implements Serializable {
     private Integer productId;
     private String name;
     private int quantityInStock;
